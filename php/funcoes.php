@@ -122,3 +122,20 @@
 		mysqli_close($conexao);
 	}
 ?>
+<?php
+	function mostra_time(){
+		include ("conexao.php");
+
+		mysqli_select_db($conexao, "campeonatos_");
+		$usuario = $_SESSION["usuario"];
+		$sql="SELECT * FROM time 
+		WHERE dono = '$usuario'";
+
+		$resultado=mysqli_query($conexao,$sql);
+		$time=mysqli_fetch_array($resultado);
+			echo "".$time[0];
+		
+		mysqli_close($conexao);
+
+	}
+?>
