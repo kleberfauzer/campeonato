@@ -1,11 +1,18 @@
+
+	
 <!DOCTYPE HTML>
 <html lang="BR">
-	<head>
+	<head >
 		<title>Bem vindo</title>
 		<meta charset = "UTF-8" />
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/signin.css" rel="stylesheet">
 	</head>
+	<?php
+		include("modo_noturno.html");
+	?>
+	<body id="muda">
+	
 <?php 
 	if(isset($_SESSION["usuario"])){
 		echo 
@@ -16,3 +23,4 @@
 		
 	}
 ?>
+	</body>

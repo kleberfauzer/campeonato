@@ -1,0 +1,21 @@
+
+<img onclick ='troca_valor()' id="luz" src="lamp_acesa.jpg" width="50">
+<br>
+
+<script>
+var luz = 0;
+function troca_valor(){
+	if(luz == 0){
+		document.getElementById("luz"). src = "lamp_apagada.jpg";
+		document.getElementById("muda").style.backgroundColor = "black";
+		document.getElementById("muda").style.color = "white";
+		luz = 1;
+	}
+	else{
+		document.getElementById("luz"). src = "lamp_acesa.jpg";
+		document.getElementById("muda").style.backgroundColor = "white";
+		document.getElementById("muda").style.color = "black";
+		luz = 0;
+	}
+}
+</script>
