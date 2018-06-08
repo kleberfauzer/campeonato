@@ -121,6 +121,12 @@
 		echo "<a href = 'meu_usuario.php>Volte para aba usuário</a>'";
 		mysqli_close($conexao);
 	}
+
+function cadastra_placar(){
+	
+	
+	
+}
 ?>
 <?php
 	function mostra_time(){
