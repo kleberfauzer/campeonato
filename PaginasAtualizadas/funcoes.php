@@ -57,10 +57,9 @@
 		$usuario = $_SESSION["usuario"];
 		$nome_campeonato = $post["nome_camp"];
 		$num_times = $post["n_time_camp"];
-		$tipo = $post["tipo"];
 			if($num_times % 2 == 0){
 				$sql_insercao = "INSERT INTO campeonato (id, nome, num_times, tipo)
-					VALUES ('$id','$nome_campeonato','$num_times', '$tipo')";
+					VALUES ('$id','$nome_campeonato','$num_times', '0')";
 				$resultado = mysqli_query($conexao, $sql_insercao);
 				$sql_insercao_ucp = "INSERT INTO usuario_campeonato (usuario, id_campeonato)
 					VALUES ('$usuario','$id')";				
@@ -129,13 +128,7 @@
 		$resultado_c = mysqli_query($conexao, $sql_consulta);
 		$linhas = mysqli_num_rows($resultado_c);
 		if($linhas==0){
-			if($tp["tipo"]=="mm"){
-				$sql_insercao = 
-				 "INSERT INTO time_campeonato(nome_time, id_campeonato, tipo)
-				  VALUES('".$time['nome']."','$convite','mm')";
-				$resultado3 = mysqli_query($conexao, $sql_insercao);
-				
-			}else{
+			
 				$sql_insercao = 
 				 "INSERT INTO time_campeonato(nome_time, id_campeonato, tipo)
 				  VALUES('".$con_time['nome']."','$convite','pc')";
@@ -146,7 +139,7 @@
 				$resultado3 = mysqli_query($conexao, $sql_insere_classificacao);
 				
 				die("Time Cadastrado no campeonato com Sucesso! <a href = 'campeonatos.php'>Voltar</a>");
-			}
+			
 		}else{
 			echo "Você já esta cadastrado nesse campeonato! <a href = 'campeonatos.php'>Voltar</a>";
 		}
@@ -167,15 +160,11 @@
 		$linhas2 = mysqli_num_rows($res_consulta_tipo);
 		for($i=0;$i<$linhas2;$i++){
 			$vt_ct_assoc = mysqli_fetch_assoc($res_consulta_tipo);
-			if($vt_ct_assoc["tipo"]=="mm"){
-				$insercao_mm = "INSERT INTO mata_mata(id_campeonato, nome_time, gols_pro, gols_contra, classificado)
-				VALUES('".$vt_ct_assoc['id_campeonato']."','".$vt_ct_assoc['nome_time']."','0','0','0')";
-				$res_ins_mm = mysqli_query($conexao, $insercao_mm);
-			}else{
+			
 				$insercao_pc = "INSERT INTO classificacao(id_campeonato, nome_time, gols_pro, gols_contra, saldo_gols, pontuacao)
 				VALUES('".$vt_ct_assoc['id_campeonato']."','".$vt_ct_assoc['nome_time']."','0','0','0','0')";
 				$res_ins_pc = mysqli_query($conexao, $insercao_pc);
-			}
+			
 		}
 		mysqli_close($conexao);
 	}

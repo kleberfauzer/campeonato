@@ -18,11 +18,6 @@
 						<label>Quantidade de times</label>
 						<input type="number" class="form-control" name = "n_time_camp"  placeholder="1" required><br >
 					</div>
-					<div class="col-md-6 mb-3">
-						<label>Formato do campeonato</label><br >
-						<input type = "radio" name = "tipo" value = "pc" /> Pontos corridos &nbsp;&nbsp;&nbsp;
-						<input type = "radio" name = "tipo" value = "mm" /> Mata-mata
-					</div>
 				</div>
             <hr class="mb-4">
             <button class="btn btn-primary btn-lg btn-block" type="submit">Cadastrar</button>
