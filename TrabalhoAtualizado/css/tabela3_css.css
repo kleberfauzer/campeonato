@@ -1,0 +1,27 @@
+th{
+	text-align: center;
+	background-color: rgb(172,224,249);
+}
+td{
+	text-align:center;
+	background-color: rgb(218,241,252);
+}
+table{
+	margin-left: 340px; /*espaco à esquerda*/
+	font-family: sans-serif;
+	width: 50%;
+	border-collapse: collapse; /*Tranforma b dupla -> b simples*/
+	border-style: solid;
+	border-color: rgb(172,224,249);
+	margin-top: 10px; 
+}
+
+.pontos1,.pontos2{
+	margin-top: 30px; /*espaço entre titulo e tabela*/
+}
+
+h2{
+	text-shadow: 3px 3px 0px #eaeaea, 6px 6px 0px #ccc; /*Sombras solidas em 2 etapas /sombra à 3px vert 3px hor 0desfoq*/
+	text-align: center; /*alinhar o texto no centro*/
+	font-family: tahoma 40px; /*font / tamanho*/
+}

@@ -1,0 +1,38 @@
+#appearance-select{
+   
+   
+   -webkit-appearance: none;  /* Remove estilo padrão do Chrome */
+   -moz-appearance: none; /* Remove estilo padrão do FireFox */
+   
+   
+   
+   appearance: none; /* Remove estilo padrão do FireFox*/
+   background: url(css/img/iconeseta.gif) rgb(218,241,252);  /* Imagem de fundo (Seta) */
+   
+   
+   background-position: 218px center;  /*Posição da imagem do background*/
+   width: 250px; /* Tamanho do select, maior que o tamanho da div "div-select" */
+   
+   
+   
+   height:30px; /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
+   border:1px solid #ddd;
+}
+
+input {
+    text-decoration: none;	
+    margin: 4px 2px;
+    cursor: pointer;
+	background-color: white;
+	color:  grey;
+	font-family: tahoma;
+}
+
+h2{
+	text-align: center;
+}
+
+.select{
+	margin-left: 500px;
+}
+
