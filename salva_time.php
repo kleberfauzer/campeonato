@@ -1,6 +1,6 @@
 <?php
 	include("cabecalho.php");
 	include("funcoes.php");
-	cadastrar_campeonato($_POST);
+	cadastrar_time($_POST);
 	include("rodape.php");
 ?>
